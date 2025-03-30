@@ -95,11 +95,18 @@ lip install github.com/GlacieTeam/AntiXray
 - **engine-mode 1**: when a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in `"obfuscate_blocks"` in config based on the dimension. 
 - **engine-mode 2**: works similarly to **engine-mode 1**, but instead of randomizing every block, it randomizes the block for each layer of a chunk.
 
+**You can intuitively compare the effects of different engine modes through the following images.**
 <details>
-  <summary>Example Pictures</summary>
+  <summary>Engine Mode Showcase</summary>
 
-TODO
-
+### No AntiXray
+![none](./pictures/none.jpg)
+### Engine Mode 0
+![engine-mode-0](./pictures/engine-mode-0.jpg)
+### Engine Mode 1
+![engine-mode-1](./pictures/engine-mode-1.jpg)
+### Engine Mode 2
+![engine-mode-2](./pictures/engine-mode-2.jpg)
 </details>
 
 # Communication & FAQ
