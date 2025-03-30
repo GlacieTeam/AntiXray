@@ -3,12 +3,12 @@ This is a high-performance, highly customizable server-side anti-cheat mod desig
 
 # Core Features
 - **High Performance** Utilizes multi-threaded ore obfuscation algorithms to significantly reduce server performance overhead, ensuring stable operation even under high load and preventing lag caused by obfuscation operations.  
-> - **LeviLamina Only.** Multithreaded obfuscation on the Endstone platform is not memory-safe.
+> Note: **LeviLamina Only.** Multithreaded obfuscation on the Endstone platform is not memory-safe.
 - **Highly Customizable** Offers a high degree of customization, allowing server administrators to adjust all configurations according to their needs, from the types of ores to be obfuscated to the frequency and intensity of obfuscation.
-> - Due to performance issues on Endstone platform, highly customizable configuration files are not supported on the Endstone platform.
+> Note: Due to performance issues on Endstone platform, highly customizable configuration files are not supported on the Endstone platform.
 - **Strong Compatibility** Rigorously tested to perfectly integrate with various custom dimensions and server plugins, ensuring no conflicts with other systems or plugins and maintaining stable server operation.  
 - **Effective Obfuscation** Employs advanced obfuscation algorithms to ensure seamless seamless obfuscation of chunk border and achieve perfect ore obfuscation, effectively preventing players from obtaining ore information through cheat clients.
-> - Due to the limitations of the Endstone platform, the speed of obfuscating blocks in chunk border on Endstone is over 40 times slower than on LeviLamina, and it cannot achieve the completely seamless obfuscation of chunk border that is possible on the LeviLamina platform.
+> Note: Due to the limitations of the Endstone platform, the speed of obfuscating blocks in chunk border on Endstone is over 40 times slower than on LeviLamina, and it cannot achieve the completely seamless obfuscation of chunk border, which is possible on the LeviLamina platform.
 
 # Technical Advantages
 - **Multi-threaded Processing** Distributes ore obfuscation tasks across multiple threads using multi-threading technology, significantly improving processing speed and reducing server performance overhead.  
@@ -28,12 +28,20 @@ lip install github.com/GlacieTeam/AntiXray
 
 # Configuration
 ## Endstone
+<details>
+  <summary>Endstone Configuration</summary>
+
 ```json
 {
     "obfuscate_border": false  // whether obfuscate chunck border, this will incur an additional performance overhead of 3-4 times.
 }
 ```
+</details>
+
 ## LeviLamina
+<details>
+  <summary>LeviLamina Configuration</summary>
+
 ```json
 {
     "version": 0,  // config version, do NOT modify it 
@@ -79,6 +87,8 @@ lip install github.com/GlacieTeam/AntiXray
             "main_block": "minecraft:stone",
             "main_block_minus": "minecraft:deepslate"   // optional. This will only be used in engine mode 0, will send ture ores as main block when block y is minus.
         }
+        // You can also add custom dimensions here
     }
 }
 ```
+</details>
