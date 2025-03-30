@@ -1,4 +1,16 @@
 # AntiXray - High-Performance Ore Obfuscation Anti-Cheat Mod
+
+![English](https://img.shields.io/badge/English-inactive?style=for-the-badge)
+[![简体中文](https://img.shields.io/badge/简体中文-informational?style=for-the-badge)](README.zh.md)
+
+[![QQ](https://img.shields.io/badge/642538983-pink?style=for-the-badge&logo=qq)](https://qm.qq.com/q/1yn1ZHEoyY)
+[![Discord](https://img.shields.io/discord/1346034987136192523?style=for-the-badge&logo=discord)](https://discord.gg/7uJNS3tNa6)
+
+[![Latest Tag](https://img.shields.io/github/v/tag/GlacieTeam/AntiXray?label=Latest%20Tag&style=for-the-badge)](https://github.com/GlacieTeam/AntiXray/releases)
+[![Stars](https://img.shields.io/github/stars/GlacieTeam/AntiXray.svg?style=for-the-badge)](https://github.com/GlacieTeam/AntiXray/stargazers)  
+[![Downloads](https://img.shields.io/github/downloads/GlacieTeam/AntiXray/total?style=for-the-badge&color=%2300ff00)](https://github.com/GlacieTeam/AntiXray/releases)
+[![Issues](https://img.shields.io/github/issues/GlacieTeam/AntiXray.svg?style=for-the-badge)](https://github.com/GlacieTeam/AntiXray/issues)
+
 This is a high-performance, highly customizable server-side anti-cheat mod designed to prevent players from using cheat clients for ore X-ray. It employs advanced multi-threaded ore obfuscation technology to ensure that the server does not experience lag due to obfuscation operations, providing a smooth gaming experience for players.
 
 # Technical Advantages
@@ -13,8 +25,8 @@ This is a high-performance, highly customizable server-side anti-cheat mod desig
 
 # Installation
 ## Endstone
-1. Download the Mod File Download the latest version of the Mod file from the Releases page
-2. Place the File Place the downloaded Mod file in the server's plugin directory.
+1. Download the Mod File Download the latest version of the Mod file from the [Releases](https://github.com/GlacieTeam/AntiXray/releases) page
+2. Place the File Place the downloaded Mod file in the `./plugins` directory.
 3. Restart the Server Restart the server to load the Mod.
 ## LeviLamina
 - Install this mod using Lip.
@@ -91,7 +103,7 @@ lip install github.com/GlacieTeam/AntiXray
 
 # Engine Mode (LeviLamina Only)
 **AntiXray has three different modes, configurable on a per dimension basis.**
-- **engine-mode 0**: replaces `"obfuscate_blocks"` in config with `"main_block"` or `"main_block_minus"` in config based on the dimension.
+- **engine-mode 0**: when `"obfuscate_blocks"` in config is covered by solid blocks on all six sides, it will be replaced with `"main_block"` or `"main_block_minus"` in config based on the dimension.
 - **engine-mode 1**: when a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in `"obfuscate_blocks"` in config based on the dimension. 
 - **engine-mode 2**: works similarly to **engine-mode 1**, but instead of randomizing every block, it randomizes the block for each layer of a chunk.
 
