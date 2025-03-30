@@ -1,19 +1,15 @@
 # AntiXray - High-Performance Ore Obfuscation Anti-Cheat Mod
 This is a high-performance, highly customizable server-side anti-cheat mod designed to prevent players from using cheat clients for ore X-ray. It employs advanced multi-threaded ore obfuscation technology to ensure that the server does not experience lag due to obfuscation operations, providing a smooth gaming experience for players.
 
-# Core Features
-- **High Performance** Utilizes multi-threaded ore obfuscation algorithms to significantly reduce server performance overhead, ensuring stable operation even under high load and preventing lag caused by obfuscation operations.  
-> Note: **LeviLamina Only.** Multithreaded obfuscation on the Endstone platform is not memory-safe.
-- **Highly Customizable** Offers a high degree of customization, allowing server administrators to adjust all configurations according to their needs, from the types of ores to be obfuscated to the frequency and intensity of obfuscation.
-> Note: Due to performance issues on Endstone platform, highly customizable configuration files are not supported on the Endstone platform.
-- **Strong Compatibility** Rigorously tested to perfectly integrate with various custom dimensions and server plugins, ensuring no conflicts with other systems or plugins and maintaining stable server operation.  
-- **Effective Obfuscation** Employs advanced obfuscation algorithms to ensure seamless seamless obfuscation of chunk border and achieve perfect ore obfuscation, effectively preventing players from obtaining ore information through cheat clients.
-> Note: Due to the limitations of the Endstone platform, the speed of obfuscating blocks in chunk border on Endstone is over 40 times slower than on LeviLamina, and it cannot achieve the completely seamless obfuscation of chunk border, which is possible on the LeviLamina platform.
-
 # Technical Advantages
 - **Multi-threaded Processing** Distributes ore obfuscation tasks across multiple threads using multi-threading technology, significantly improving processing speed and reducing server performance overhead.  
 - **Seamless Obfuscation** Uses advanced obfuscation algorithms to ensure seamless seamless obfuscation of chunk border and achieve perfect ore obfuscation, making it impossible for cheat clients to detect.  
 - **Flexible Configuration** Provides detailed configuration files that allow administrators to easily adjust the types of ores, frequency, and intensity of obfuscation to meet the needs of different servers.
+- **Strong Compatibility** Rigorously tested to perfectly integrate with various custom dimensions and server plugins, ensuring no conflicts with other systems or plugins and maintaining stable server operation. 
+> ## Note: 
+> - Due to multithreaded obfuscation on the **Endstone** platform is not memory-safe, so it is **LeviLamina Only**.
+> - Due to performance issues on **Endstone** platform, highly customizable configuration files are not supported on the **Endstone** platform, so it is **LeviLamina Only**.
+> - Due to the limitations of the **Endstone** platform, the speed of obfuscating blocks in chunk border on **Endstone** is over 40 times slower than on **LeviLamina**, and it cannot achieve the completely seamless obfuscation of chunk border, which is possible on the **LeviLamina** platform.
 
 # Installation
 ## Endstone
