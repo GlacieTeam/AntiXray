@@ -108,7 +108,7 @@ lip install github.com/GlacieTeam/AntiXray
 - **engine-mode 1**: 当一个方块的6个面都是固体方块时，会随机发送一个该维度的配置文件中的 `"obfuscate_blocks"` 进行替换. 
 - **engine-mode 2**: 和 **engine-mode 1** 类似，但不是随机发送每一个方块，而是每一层方块，这可以减小宽带占用。
 
-**Y你可以从下面的图片对比不同模式的效果**
+**你可以从下面的图片对比不同模式的效果**
 <details>
   <summary>Engine Mode Showcase</summary>
 

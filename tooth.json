@@ -1,0 +1,52 @@
+{
+    "format_version": 3,
+    "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
+    "tooth": "github.com/GlacieTeam/AntiXray",
+    "version": "1.0.0",
+    "info": {
+        "name": "AntiXray",
+        "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
+        "tags": [
+            "anticheat",
+            "antixray",
+            "type:mod",
+            "platform:levilamina",
+            "platform:endstone"
+        ],
+        "avatar_url": ""
+    },
+    "variants": [
+        {
+            "label": "",
+            "platform": "win-x64",
+            "dependencies": {},
+            "assets": [
+                {
+                    "type": "zip",
+                    "urls": [
+                        "https://github.com/GlacieTeam/AntiXray/releases/download/v1.0.0/AntiXray-levilamina-windows.zip"
+                    ],
+                    "placements": [
+                        {
+                            "type": "dir",
+                            "src": "AntiXray/",
+                            "dest": "plugins/AntiXray/"
+                        }
+                    ]
+                }
+            ],
+            "preserve_files": [],
+            "remove_files": [],
+            "scripts": {
+                "pre_install": [],
+                "install": [],
+                "post_install": [],
+                "pre_pack": [],
+                "post_pack": [],
+                "pre_uninstall": [],
+                "uninstall": [],
+                "post_uninstall": []
+            }
+        }
+    ]
+}
