@@ -95,7 +95,7 @@ lip install github.com/GlacieTeam/AntiXray
 
 # Engine Mode (LeviLamina Only)
 **AntiXray has three different modes, configurable on a per dimension basis.**
-- **engine-mode 0**: replaces `"obfuscate_blocks"` in config with other `"main_block"` or `"main_block_minus"` in config based on the dimension.
+- **engine-mode 0**: replaces `"obfuscate_blocks"` in config with `"main_block"` or `"main_block_minus"` in config based on the dimension.
 - **engine-mode 1**: when a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in `"obfuscate_blocks"` in config based on the dimension. 
 - **engine-mode 2**: works similarly to **engine-mode 1**, but instead of randomizing every block, it randomizes the block for each layer of a chunk.
 
@@ -105,3 +105,16 @@ lip install github.com/GlacieTeam/AntiXray
 TODO
 
 </details>
+
+# Communication & FAQ
+- Join our [Discord](https://discord.gg/7uJNS3tNa6) community: https://discord.gg/7uJNS3tNa6
+- Join our [QQ Group](https://qm.qq.com/q/1yn1ZHEoyY): 642538983
+
+# Feedback
+- [Open an issue](https://github.com/GlacieTeam/AntiXray/issues) to report bugs.
+
+# License
+- [GitHub Release](https://github.com/GlacieTeam/AntiXray/releases) is the sole and exclusive official source for downloading. Any other source of download is unauthorized and constitutes illegal reproduction. 
+- Unauthorized reproduction, integration, or redistribution is strictly prohibited.
+
+## Copyright © 2025 GlacieTeam. All rights reserved.
