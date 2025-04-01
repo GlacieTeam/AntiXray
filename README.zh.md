@@ -53,8 +53,16 @@ lip install github.com/GlacieTeam/AntiXray
 
 ```json
 {
-    "version": 0,  // 配置文件版本，不要修改
+    "version": 1,  // 配置文件版本，不要修改
     "max_threads": 4,  // 矿物混淆引擎可以使用的最大线程数，设置为0使用服务器物理线程数
+    "auto_solid_check": true, // 是否自动检测固态方块。Vanilla方块的检测是100%正确的，但是Addon方块检测准确性取决于Addon作者。
+    "treat_addon_blocks_as_non_solid": false,  // 是否将 Addons 添加的方块都视为非固态
+    "solid_blocks": [  // 可选。仅当关闭 "auto_solid_check" 时生效。通过手动指定固态方块来代替自动检测。
+        "minecraft:diamond_ore"
+    ],
+    "non_solid_blocks": [  // 可选。如果 AntiXray 不能自动检测某些非固态方块（比如Addon方块，或者某些Vanilla方块使用了自定义的非固态材质包），你可以在这里手动添加。
+        "minecraft:packed_ice"
+    ],
     "dimensions": {  // 维度配置，你可以添加自定义维度
         "minecraft:nether": {
             "enable": true,    // 是否启用混淆

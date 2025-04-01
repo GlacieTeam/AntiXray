@@ -2,7 +2,7 @@
     "format_version": 3,
     "format_uuid": "289f771f-2c9a-4d73-9f3f-8492495a924d",
     "tooth": "github.com/GlacieTeam/AntiXray",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "info": {
         "name": "AntiXray",
         "description": "High-Performance Ore Obfuscation Anti-Cheat Mod",
@@ -24,7 +24,7 @@
                 {
                     "type": "zip",
                     "urls": [
-                        "https://github.com/GlacieTeam/AntiXray/releases/download/v1.0.0/AntiXray-levilamina-windows.zip"
+                        "https://github.com/GlacieTeam/AntiXray/releases/download/v1.0.1/AntiXray-levilamina-windows.zip"
                     ],
                     "placements": [
                         {

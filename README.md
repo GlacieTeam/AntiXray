@@ -52,8 +52,16 @@ lip install github.com/GlacieTeam/AntiXray
 
 ```json
 {
-    "version": 0,  // config version, do NOT modify it 
+    "version": 1,  // config version, do NOT modify it 
     "max_threads": 4,  // The max number of threads used by the ore obfuscation engine, setting it to 0 means using the number of physical threads.
+    "auto_solid_check": true,  // whether check solid block automatically. The detection of Vanilla squares is 100% correct, but the accuracy of Addon block detection depends on the Addon author.
+    "treat_addon_blocks_as_non_solid": false,  // whether treat all blocks added by Addons as non-solid block.
+    "solid_blocks": [  // optional. This will be used only when "auto_solid_check" is disabled. Specify solid blocks manually instead of automatically detecting.
+        "minecraft:diamond_ore"
+    ],
+    "non_solid_blocks": [  // optional. If AntiXray can not automatically detect some non-solid blocks (such as some addon blocks, or some solid vanilla blocks with custom non-solid resource pack), you can add them here manually.
+        "minecraft:packed_ice"
+    ],
     "dimensions": {  // dimension config, you can also add custom dimensions
         "minecraft:nether": {
             "enable": true,    // enable obfuscation
