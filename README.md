@@ -19,8 +19,6 @@ This is a high-performance, highly customizable server-side anti-cheat mod desig
 - **Flexible Configuration** Provides detailed configuration files that allow administrators to easily adjust the types of ores, frequency, and intensity of obfuscation to meet the needs of different servers.
 - **Strong Compatibility** Rigorously tested to perfectly integrate with various custom dimensions and server plugins, ensuring no conflicts with other systems or plugins and maintaining stable server operation. 
 > ## Note: 
-> - Due to multithreaded obfuscation on the **Endstone** platform is not memory-safe, so it is **LeviLamina Only**.
-> - Due to performance issues on **Endstone** platform, highly customizable configuration files are not supported on the **Endstone** platform, so it is **LeviLamina Only**.
 > - Due to the limitations of the **Endstone** platform, the speed of obfuscating blocks in chunk border on **Endstone** is over 40 times slower than on **LeviLamina**, and it cannot achieve the completely seamless obfuscation of chunk border, which is possible on the **LeviLamina** platform.
 
 # Installation
@@ -41,7 +39,16 @@ lip install github.com/GlacieTeam/AntiXray
 
 ```json
 {
-    "obfuscate_border": false  // whether obfuscate chunck border, this will incur an additional performance overhead of 3-4 times.
+    "minecraft:nether": {
+        "engine_mode": 0,          // obfuscation engine mode, see engine mode for more details
+        "max_height": 128,         // obfuscation max block y hight, must be a multiple of 16
+        "obfuscate_border": true   // whether obfuscate chunck border, this will incur an additional performance overhead of 3-4 times.
+    },
+    "minecraft:overworld": {
+        "engine_mode": 0,
+        "max_height": 96,
+        "obfuscate_border": true
+    }
 }
 ```
 </details>
@@ -109,7 +116,7 @@ lip install github.com/GlacieTeam/AntiXray
 ```
 </details>
 
-# Engine Mode (LeviLamina Only)
+# Engine Mode
 **AntiXray has three different modes, configurable on a per dimension basis.**
 - **engine-mode 0**: when `"obfuscate_blocks"` in config is covered by solid blocks on all six sides, it will be replaced with `"main_block"` or `"main_block_minus"` in config based on the dimension.
 - **engine-mode 1**: when a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in `"obfuscate_blocks"` in config based on the dimension. 
