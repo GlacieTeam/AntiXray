@@ -37,17 +37,101 @@ lip install github.com/GlacieTeam/AntiXray
 <details>
   <summary>Endstone Configuration</summary>
 
-```json
+```jsonc
 {
-    "minecraft:nether": {
-        "engine_mode": 0,          // obfuscation engine mode, see engine mode for more details
-        "max_height": 128,         // obfuscation max block y hight, must be a multiple of 16
-        "obfuscate_border": true   // whether obfuscate chunck border, this will incur an additional performance overhead of 3-4 times.
-    },
-    "minecraft:overworld": {
-        "engine_mode": 0,
-        "max_height": 96,
-        "obfuscate_border": true
+    /*
+    * Optional.
+    * Some resource pack may render some solid blocks as transparent block, you can add them here manually.e.g. minecraft:packed_ice is solid block, but many resource packs render it as transparent
+    * Blame Endstone, we can NOT add custom blocks (blocks from Addons) here.
+    */
+    "non_solid_blocks": [
+        "minecraft:packed_ice"
+    ],
+    // Dimension config, you can also add custom dimensions
+    "dimensions": {
+        "minecraft:overworld": {
+            // Whether to enable anti-xray in this dimension.
+            "enable": true,
+            // Whether to obfuscate subchunk border.
+            "obfuscate_border": true,
+            // Update block radius, set it too large may cause performance issues.
+            "update_radius": 2,
+            // Max height to obfuscate, must be a multiple of 16
+            "max_height": 128,
+            /*
+            * Obfuscation engine mode.
+            * engine-mode 0:
+            *     When "obfuscate_blocks" in config is covered by solid blocks on all six sides, it will be replaced
+            *     with "main_block" or "main_block_minus" in config based on the dimension.
+            * engine-mode 1:
+            *     When a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in
+            *     "obfuscate_blocks" in config based on the dimension.
+            * engine-mode 2:
+            *     Works similarly to engine-mode 1, but instead of randomizing every block, it randomizes the block for
+            *     each layer of a chunk, and this will reduce network bandwidth usage
+            *  
+            * See https://github.com/GlacieTeam/AntiXray for more detail.
+            */
+            "engine_mode": 1,
+            // If you are using engine mode 0, these are blocks will hide, else are fake ores will send to clients.
+            "obfuscate_blocks": [
+                "minecraft:coal_ore",
+                "minecraft:copper_ore",
+                "minecraft:deepslate_coal_ore",
+                "minecraft:deepslate_copper_ore",
+                "minecraft:deepslate_diamond_ore",
+                "minecraft:deepslate_emerald_ore",
+                "minecraft:deepslate_gold_ore",
+                "minecraft:deepslate_iron_ore",
+                "minecraft:deepslate_lapis_ore",
+                "minecraft:deepslate_redstone_ore",
+                "minecraft:diamond_ore",
+                "minecraft:emerald_ore",
+                "minecraft:gold_ore",
+                "minecraft:iron_ore",
+                "minecraft:lapis_ore",
+                "minecraft:raw_copper_block",
+                "minecraft:raw_iron_block",
+                "minecraft:redstone_ore"
+            ],
+            // Optional. This will only be used in engine mode 0, will send ture ores as main block.
+            "main_block": "minecraft:stone",
+            // Optional. This will only be used in engine mode 0, will send ture ores as main block when block y is minus.
+            "main_block_minus": "minecraft:deepslate"
+        },
+        "minecraft:nether": {
+            // Whether to enable anti-xray in this dimension.
+            "enable": true,
+            // Whether to obfuscate subchunk border.
+            "obfuscate_border": true,
+            // Update block radius, set it too large may cause performance issues.
+            "update_radius": 2,
+            // Max height to obfuscate, must be a multiple of 16
+            "max_height": 128,
+            /*
+            * Obfuscation engine mode.
+            * engine-mode 0:
+            *     When "obfuscate_blocks" in config is covered by solid blocks on all six sides, it will be replaced
+            *     with "main_block" or "main_block_minus" in config based on the dimension.
+            * engine-mode 1:
+            *     When a block is covered by solid blocks on all six sides, it will be randomly replaced by a block in
+            *     "obfuscate_blocks" in config based on the dimension.
+            * engine-mode 2:
+            *     Works similarly to engine-mode 1, but instead of randomizing every block, it randomizes the block for
+            *     each layer of a chunk, and this will reduce network bandwidth usage
+            *  
+            * See https://github.com/GlacieTeam/AntiXray for more detail.
+            */
+            "engine_mode": 1,
+            // If you are using engine mode 0, these are blocks will hide, else are fake ores will send to clients.
+            "obfuscate_blocks": [
+                "minecraft:ancient_debris",
+                "minecraft:nether_gold_ore",
+                "minecraft:quartz_ore"
+            ],
+            // Optional. This will only be used in engine mode 0, will send ture ores as main block.
+            "main_block": "minecraft:netherrack"
+        }
     }
 }
 ```
