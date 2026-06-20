@@ -141,4 +141,4 @@ lip install github.com/GlacieTeam/AntiXray
 - [GitHub Release](https://github.com/GlacieTeam/AntiXray/releases) 是唯一官方下载源。其它任何下载源都是未经授权的非法转载。
 - 未经许可，严禁任何转载、整合和二次分发。
 
-## 版权所有 © 2025 GlacieTeam, 保留所有权利.
+## 版权所有 © 2025-2026 GlacieTeam, 保留所有权利.
